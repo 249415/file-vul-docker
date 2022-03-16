@@ -27,10 +27,10 @@ const FileUpload = () => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
-    console.log(file)
+
 
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData, { // Зависит от того, на каком порту запустился сервер, по дефолту я поставил 5000 в server.js
+      const res = await axios.post('/api/upload', formData, { // Зависит от того, на каком порту запустился сервер, по дефолту я поставил 5000 в server.js
         headers: {
           'Content-Type': 'multipart/form-data'
         }

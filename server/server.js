@@ -1,7 +1,6 @@
 const express = require('express');
 var cors = require('cors')
 const fileUpload = require('express-fileupload');
-const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(fileUpload());
@@ -24,4 +23,4 @@ app.post('/upload', (req, res) => {
   });
 });
 
-app.listen(PORT, () => console.log(`Server Started on port ${PORT} ${__dirname}/../client/public/uploads/`));
+app.listen('3001', () => console.log(`Server Started on port 3001 ${__dirname}/../client/public/uploads/`));
